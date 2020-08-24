@@ -1,0 +1,16 @@
+#!/usr/sbin/nft -f
+
+define ports = { 0-21, 23-24, 26-52, 54-79, 81-122, 124-442, 444-1023 }
+
+table ip filter {
+	chain RAW_IN {
+		iifname $iface tcp dport $ports log prefix "PORTSCAN " counter drop
+		iifname $iface udp dport $ports log prefix "PORTSCAN " counter drop
+	}
+}
+table ip6 filter {
+	chain RAW_IN {
+		iifname $iface tcp dport $ports log prefix "PORTSCAN " counter drop
+		iifname $iface udp dport $ports log prefix "PORTSCAN " counter drop
+	}
+}
