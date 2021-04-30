@@ -41,6 +41,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
+alias ip='ip -c'
 
 ### Funções
 function getUpdates()
@@ -68,3 +69,25 @@ function lower()
     tr '[:upper:]' '[:lower:]'
 }
 
+### Variáveis
+# Cores de texto (no terminal)
+textoPreto="\033[30m"
+textoVermelho="\033[31m"
+textoVerde="\033[32m"
+textoMarrom="\033[33m"
+textoAzul="\033[34m"
+textoRoxo="\033[35m"
+textoCiano="\033[36m"
+textoCinza="\033[37m"
+
+# Cores de fundo (no terminal)
+fundoPreto="\033[40m"
+fundoVermelho="\033[41m"
+fundoVerde="\033[42m"
+fundoMarrom="\033[43m"
+fundoAzul="\033[44m"
+fundoRoxo="\033[45m"
+fundoCiano="\033[46m"
+fundoCinza="\033[47m"
+
+fimCor="\033[m"
