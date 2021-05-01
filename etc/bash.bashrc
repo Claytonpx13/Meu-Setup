@@ -49,8 +49,13 @@ function getUpdates()
     # Procura e instala pacotes dos repositórios oficiais do sistema
     # assim como pacotes flatpak caso também estejam presentes.
     sudo apt update
-    sudo apt full-upgrade -y
-    flatpak update -y
+    sudo apt upgrade -y
+    
+    # Atualizações do Flatpak (caso esteja presente)
+    if command -v flatpak > /dev/null
+    then
+        flatpak update -y
+    fi
 }
 
 # Conversão para maiúscula.
