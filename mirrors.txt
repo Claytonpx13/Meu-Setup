@@ -1,0 +1,7 @@
+https://mirror.cedia.org.ec/linux-libre/freesh/
+https://mirror.cyberbits.eu/linux-libre/freesh/
+https://linux-libre.fsfla.org/pub/linux-libre/freesh/
+https://ftp.linux.org.tr/linux-libre/freesh/
+https://mirror.linux.pizza/linux-libre/freesh/
+https://mirror.splentity.com/linux-libre/freesh/
+https://mirror.uta.edu.ec/linux-libre/freesh/
