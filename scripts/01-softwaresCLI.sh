@@ -18,7 +18,7 @@ apt purge mawk -y
 
 deb=(bc curl deborphan gnupg2 apt-transport-https \
      nftables p7zip-full sudo vim wget youtube-dl \
-     gawk apt-transport-tor sudo)
+     gawk apt-transport-tor sudo bash-completion)
 
 for pacote in ${deb[@]}
 do
