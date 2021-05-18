@@ -22,5 +22,5 @@ deb=(bc curl deborphan gnupg2 apt-transport-https \
 
 for pacote in ${deb[@]}
 do
-	echo apt install ${pacote} -y --no-install-recommends
+	apt install ${pacote} -y --no-install-recommends
 done
