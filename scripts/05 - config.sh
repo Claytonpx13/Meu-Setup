@@ -26,52 +26,48 @@ echo "clayton ALL=(ALL:ALL) ALL" > /etc/sudoers.d/clayton
 chmod 0440 /etc/sudoers.d/clayton
 
 # Criando Diretórios e copiando arquivos
-wget -O /etc/default/grub link
+wget -O /etc/default/grub https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/etc/default/grub
 
 mkdir -p /etc/skel/.config
-wget -O /etc/skel/.config/user-dirs.dirs
+wget -O /etc/skel/.config/user-dirs.dirs https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/home/clayton/.config/user-dirs.dirs
 
 mkdir -p /etc/skel/.local/bin
-wget -O /etc/skel/.local/bin/cleaner link
-wget -O /etc/skel/.bash_logout
-wget -O /etc/skel/.bashrc
-wget -O /etc/skel/.profile
+wget -O /etc/skel/.local/bin/cleaner https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/home/clayton/.local/bin/cleaner
+wget -O /etc/skel/.bashrc https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/home/clayton/.bashrc
+wget -O /etc/skel/.profile https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/home/clayton/.profile
 
-wget -O /etc/vim/vimrc
+wget -O /etc/vim/vimrc https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/etc/vim/vimrc
 
-wget -O /etc/bash.bashrc
-wget -O /etc/hostname
-wget -O /etc/nftables.conf
-wget -O /etc/resolv.conf
+wget -O /etc/bash.bashrc https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/etc/bash.bashrc
+wget -O /etc/hostname https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/etc/hostname
+wget -O /etc/nftables.conf https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/etc/nftables.conf
+wget -O /etc/resolv.conf https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/etc/resolv.conf
 
 mkdir /home/clayton/.config
-wget -O /home/clayton/.config/user-dirs.dirs
+wget -O /home/clayton/.config/user-dirs.dirs https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/home/clayton/.config/user-dirs.dirs
 
 mkdir -p /home/clayton/.local/bin
-wget -O /home/clayton/.local/bin/cleaner
+wget -O /home/clayton/.local/bin/cleaner https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/home/clayton/.local/bin/cleaner
 
-wget -O /home/clayton/.bashrc
-wget -O /home/clayton/.profile
-wget -O /home/clayton/.selected_editor
+wget -O /home/clayton/.bashrc https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/home/clayton/.bashrc
+wget -O /home/clayton/.profile https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/home/clayton/.profile
+wget -O /home/clayton/.selected_editor https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/home/clayton/.selected_editor
 
 mkdir -p /root/.local/bin
-wget -O /root/.local/bin/autoUpdate
-wget -O /root/.local/bin/cleaner
-wget -O /root/.local/bin/scan
+wget -O /root/.local/bin/autoUpdate https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/root/.local/bin/autoUpdate
+wget -O /root/.local/bin/cleaner https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/root/.local/bin/cleaner
 
-mkdir -p /root/.quarentena
-
-wget -O /root/.bashrc
-wget -o /root/.profile
+wget -O /root/.bashrc https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/root/.bashrc
+wget -o /root/.profile https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/root/.profile
 
 mkdir -p /usr/local/etc/nftables.d
-wget -O /usr/local/etc/nftables.d/portScan.nft
-wget -O /usr/local/etc/nftables.d/valveSteam.nft
+wget -O /usr/local/etc/nftables.d/portScan.nft https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/usr/local/etc/nftables.d/portScan.nft
+wget -O /usr/local/etc/nftables.d/valveSteam.nft https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/usr/local/etc/nftables.d/valveSteam.nft
 
 # Configurações do agendador de tarefas
 mkdir -p /var/spool/cron/crontabs
-wget -O /var/spool/cron/crontabs/clayton
-wget -O /var/spool/cron/crontabs/root
+wget -O /var/spool/cron/crontabs/clayton https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/var/spool/cron/crontabs/clayton
+wget -O /var/spool/cron/crontabs/root https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/var/spool/cron/crontabs/root
 
 # Atualizando o Grub
 update-grub
@@ -79,4 +75,3 @@ update-grub
 # Subindo as regras de firewall
 systemctl start nftables.service
 systemctl enable nftables.service
-
