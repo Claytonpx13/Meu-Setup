@@ -75,3 +75,9 @@ update-grub
 # Subindo as regras de firewall
 systemctl start nftables.service
 systemctl enable nftables.service
+
+# Atribuindo permissões em arquivos
+chown -R clayton.clayton /home/clayton
+chmod +x /home/clayton/.local/bin/cleaner
+chmod +x /root/.local/bin/autoUpdate
+chmod +x /root/.local/bin/cleaner
