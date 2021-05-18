@@ -18,7 +18,7 @@ wget -O - https://jxself.org/gpg.asc | apt-key add -
 
 # Escrevendo o arquivo /etc/apt/sources.list
 echo "# Debian GNU/Linux (Sid)
-deb https://deb.debian.orb/debian sid main
+deb https://deb.debian.org/debian sid main
 
 # Kernel Linux-Libre
 deb mirror://linux-libre.fsfla.org/pub/linux-libre/freesh/mirrors.txt freesh main" > /etc/apt/sources.list
