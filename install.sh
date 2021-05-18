@@ -15,4 +15,10 @@
 # ------------------------------------------------------------------------------
 
 # Baixar e execultar scripts
-#wget -O - https://link.com/arquivo.sh | bash
+wget -O - https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/scripts/01-softwaresCLI.sh | bash
+wget -O - https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/scripts/02-debian_sid.sh | bash
+wget -O - https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/scripts/03-softwaresGUI.sh | bash
+wget -O - https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/scripts/04-flatinstall.sh | bash
+wget -O - https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/scripts/05-config.sh | bash
+
+echo Concluido.
