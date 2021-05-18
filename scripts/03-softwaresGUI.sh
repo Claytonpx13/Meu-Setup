@@ -18,6 +18,6 @@ deb=(gnome-core firefox firefox-l10n-pt-br vlc vlc-l10n telegram-desktop \
 
 for pacote in ${deb[@]}
 do
-	echo apt install ${pacote} -y --no-install-recommends
+	apt install ${pacote} -y --no-install-recommends
 done
 
