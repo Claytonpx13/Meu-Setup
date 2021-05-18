@@ -1,0 +1,27 @@
+#!/bin/bash
+# ------------------------------------------------------------------------------
+# autoUpdate - Atualizações automaticas
+#
+# Autor: Clayton Pereira
+# Contato: Telegram: @Clayton_Pereira
+# Data da ultima modificação: 30-04-2021
+#
+# Descrição:
+#      Atualiza as listas de pacotes e os pacotes em si. A tarefa é realizada de
+#    forma automatica e transparente para o usuário.
+#      Este escript foi escrito para rodar como uma tarefa do seu agendador de 
+#    tarefas.
+#
+# Licença: GPLv3 <https://www.gnu.org/licenses/gpl-3.0.txt>
+# ------------------------------------------------------------------------------
+
+# Atualizações dos pacotes do Debian
+apt update &> /dev/null
+apt upgrade -y &> /dev/null
+
+# Atualizações dos pacotes Flatpak (caso esteja presente)
+if command -v flatpak
+then
+	flatpak update -y &> /dev/null
+	sudo --user=clayton flatpak update -y &> /dev/null
+fi
