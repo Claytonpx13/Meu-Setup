@@ -1,0 +1,120 @@
+#!/bin/bash
+# ------------------------------------------------------------------------------
+# cleaner - Realiza limpeza de disco
+#
+# Autor: Clayton Pereira
+# Contato: Telegram: @Clayton_Pereira
+# Data da ultima modificação: 30-04-2021
+#
+# Descrição:
+#      Realiza uma limpeza de disco rapida e transparente, script feito para
+#   rodar como tarefa no seu agendador de tarefas.
+#      Apagua arquivos temporarios do sistema, Históricos dos principais soft-
+#   wares, caches, Cookies de navegadores, Arquivos da Lixeira entre outros.
+#
+#     Versão usuário administrador (root).
+#
+# Licença: GPLv3 <https://www.gnu.org/licenses/gpl-3.0.txt>
+# ------------------------------------------------------------------------------
+
+##### APT
+# Listas de pacotes
+rm -rf "/var/lib/apt/lists/*"
+
+# Cache
+rm -rf "/var/cache/apt/archives/*"
+
+apt autoremove
+apt purge ~c
+apt autoclean
+
+##### Bash
+# Histórico
+rm -f "~/.bash_history"
+
+##### Chromium Browser
+# Armazenamento DOM
+rm -f "~/.config/chromium/Default/databases/Databases.db"
+rm -f "~/.config/chromium/Default/Local Storage/leveldb/*"
+
+# Cache
+rm -f "~/.cache/chromium/Default/Cache/*"
+rm -f "~/.cache/chromium/Default/Code Cache/*"
+rm -rf "~/.config/chromium/Default/Local Storage/*"
+rm -rf "~/.config/chromium/Default/Service Worker/CacheStorage"
+rm -rf "~/.config/chromium/Default/Service Worker/Database"
+rm -rf "~/.config/chromium/Default/Service Worker/ScriptCache"
+rm -rf "~/.config/chromium/Default/GPUCache"
+rm -rf "~/.config/chromium/GrShaderCache/GPUCache"
+rm -rf "~/.config/chromium/ShaderCache/GPUCache"
+
+# Cookies
+rm -f "~/.config/chromium/Default/Cookies"
+rm -f "~/.config/chromium/Default/Cookies-journal"
+
+# Histórico
+rm -f "~/.config/chromium/Default/History"
+rm -f "~/.config/chromium/Default/History-journal"
+rm -f "~/.config/chromium/Default/Network Action Predictor"
+rm -f "~/.config/chromium/Default/Network Action Predictor-journal"
+rm -f "~/.config/chromium/Default/Shortcuts"
+rm -f "~/.config/chromium/Default/Shortcuts-journal"
+rm -f "~/.config/chromium/Default/Top Sites"
+rm -f "~/.config/chromium/Default/Top Sites-journal"
+rm -f "~/.config/chromium/Default/Visited Links"
+rm -f "~/.config/chromium/Default/QuotaManager"
+rm -f "~/.config/chromium/Default/QuotaManager-journal"
+rm -f "~/.config/chromium/Default/LOG.old"
+rm -f "~/.config/chromium/Default/Session Storage/*"
+
+##### Evolution
+# Cache
+rm -rf "~/.cache/evolution/*"
+
+##### Firefox
+# Armazenamento DOM
+rm -f "~/.mozilla/firefox/xlouzhqj.default-release/webappsstore.sqlite"
+
+# Cache
+rm -rf "~/.cache/mozilla/firefox"
+
+# Cookies e Histórico de URLs
+rm -f "~/.mozilla/firefox/xlouzhqj.default-release//cookies.sqlite"
+rm -f "~/.mozilla/firefox/xlouzhqj.default-release//cookies.sqlite-wal"
+rm -rf "~/.mozilla/firefox/xlouzhqj.default-release//storage/default/*"
+
+# Relatórios de falhas
+rm -rf "~/.mozilla/firefox/Crash Reports/*"
+
+##### GNOME
+# Histórico de pesquisa
+rm -f "~/.local/share/gnome-shell/application_state"
+
+##### VIM
+# Histórico
+rm -f "~/.viminfo"
+
+##### VLC Media Player
+# RecentMRL
+sed -i '/netMRL=/d ; /\[RecentsMRL\]/,/*$/d' ~/.config/vlc/vlc-qt-interface.conf 2> /dev/null
+
+##### Sistema
+# Arquivo temporários
+rm -rf "/tmp/*"
+rm -rf "/var/tmp/*"
+
+# Lista de documentos recentes
+rm -f "~/.local/share/recently-used.xbel"
+
+# Lixeira
+rm -rf "~/.local/share/Trash/*"
+
+# Rotatividade de logs
+rm -f "/var/log/user.log.1"
+rm -f "/var/log/auth.log.1"
+rm -f "/var/log/syslog.1"
+rm -f "/var/log/popularity-contest.0"
+rm -f "/var/log/daemon.log.1"
+rm -f "/var/log/debug.1"
+rm -f "/var/log/kern.log.1"
+rm -f "/var/log/messages.1"
