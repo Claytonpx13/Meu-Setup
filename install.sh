@@ -15,10 +15,20 @@
 # ------------------------------------------------------------------------------
 
 # Baixar e execultar scripts
+echo "Instalando softwares CLI"
+sleep 3
 wget -O - https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/scripts/01-softwaresCLI.sh | bash
+echo "Mundado repos"
+sleep 3
 wget -O - https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/scripts/02-debian_sid.sh | bash
+echo "Instalando softwares GUI"
+sleep 3
 wget -O - https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/scripts/03-softwaresGUI.sh | bash
+echo "Instalando Flatpaks"
+sleep 3
 wget -O - https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/scripts/04-flatinstall.sh | bash
+echo "Configuracoes finais"
+sleep 3
 wget -O - https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/scripts/05-config.sh | bash
-
+echo
 echo Concluido.
