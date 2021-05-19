@@ -82,3 +82,12 @@ chown -R clayton.clayton /home/clayton
 chmod +x /home/clayton/.local/bin/cleaner
 chmod +x /root/.local/bin/autoUpdate
 chmod +x /root/.local/bin/cleaner
+
+# Criando Diretórios
+mkdir /home/clayton/Desktop
+mkdir /home/clayton/Downloads
+mkdir /home/clayton/Modelos
+mkdir /home/clayton/Documentos
+mkdir /home/clayton/Músicas
+mkdir /home/clayton/Imagens
+mkdir /home/clayton/Vídeos
