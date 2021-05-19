@@ -40,6 +40,7 @@ wget -O /etc/vim/vimrc https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/m
 
 wget -O /etc/bash.bashrc https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/etc/bash.bashrc
 wget -O /etc/hostname https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/etc/hostname
+wget -O /etc/hosts https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/etc/hosts
 wget -O /etc/nftables.conf https://raw.githubusercontent.com/Claytonpx13/Meu-Setup/master/main/etc/nftables.conf
 echo "nameserver 1.1.1.2
 nameserver 1.0.0.2" > /etc/resolv.conf
