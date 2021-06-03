@@ -18,13 +18,10 @@ wget -O - https://jxself.org/gpg.asc | apt-key add -
 
 # Escrevendo o arquivo /etc/apt/sources.list
 echo "# Debian GNU/Linux (Sid)
-deb https://deb.debian.org/debian sid main
+deb https://deb.debian.org/debian sid main" > /etc/apt/sources.list
 
-# Kernel Linux-Libre
-deb mirror://linux-libre.fsfla.org/pub/linux-libre/freesh/mirrors.txt freesh main" > /etc/apt/sources.list
-
-# Habilitando repositórios FTP 
-echo 'Dir::Bin::Methods::ftp "ftp";' > /etc/apt/apt.conf.d/99local-ftp
+echo "# Kernel Linux-Libre
+deb https://linux-libre.fsfla.org/pub/linux-libre/freesh freesh main" > /etc/apt/sources.list.d/linux-libre.list
 
 # Atualizando o sistema
 apt update
